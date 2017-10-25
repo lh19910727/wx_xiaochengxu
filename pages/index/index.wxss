@@ -19,3 +19,7 @@
 .usermotto {
   margin-top: 200px;
 }
+.userinfo-address{
+  margin:40rpx auto;
+  color: red;
+}

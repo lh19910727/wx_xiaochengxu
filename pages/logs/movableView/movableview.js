@@ -1,55 +1,31 @@
-// pages/my.js
-var app = getApp()
+// pages/logs/movableView/movableview.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    motto: 'Hello World!!',
-    userInfo: {}
+    x: 0,
+    y: 0
   },
-  //事件处理函数
-  bindViewTap: function () {
-    console.log('go')
-    wx.switchTab({
-      url: '../logs/logs'
-    })
+  tap: function (e) {
+    this.setData({
+      x: 30,
+      y: 30
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '加载中...',
-    })
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
-      //更新数据
-      that.setData({
-        userInfo: userInfo
-      })
-    })
-  wx.login({
-    success:function(res){
-      if(res.code){
-       
-      }else{
-        wx.showToast({
-          title:res.errMsg,
-        })
-      }
-     
-    }
-  })
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  wx.hideLoading()
+  
   },
 
   /**

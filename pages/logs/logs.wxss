@@ -6,3 +6,14 @@
 .log-item {
   margin: 10rpx;
 }
+.inpitem{
+  width: 100%;
+}
+.btn{
+float: left;
+
+}
+.inp{
+float: left;
+width:60%;
+}

@@ -1,6 +1,13 @@
 <!--logs.wxml-->
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
+  <block wx:for="{{logs}}" wx:key="{{index}}">
+    <text class="log-item" id="{{index}}" wx:if="{{item.show}}"  bindtap="handler">{{item.text}}</text>
+    <view class='inpitem' id='{{index}}'  bindtap='inphandle' wx:else>
+      <input type='text' data-num='{{index}}' data-ele="inp" bindinput='valhandle' class='inp' focus="{{item.focus}}"></input>
+      <button class='btn' data-ele="btn1">删除</button>
+      <button class='btn' data-ele="btn2">保存</button>
+    </view>
+    
   </block>
+ 
 </view>
