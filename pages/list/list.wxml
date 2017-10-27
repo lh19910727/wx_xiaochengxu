@@ -1,0 +1,2 @@
+<!--pages/list/list.wxml-->
+<text bindtap='clickhandle'>pages/list/list.wxml</text>

@@ -1,4 +1,4 @@
-// pages/my.js
+// pages/list/list.js
 Page({
 
   /**
@@ -7,17 +7,16 @@ Page({
   data: {
   
   },
-
+  clickhandle(){
+wx.navigateTo({
+  url: 'movableView/movableview',
+})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('my onload')
-   wx.login({
-     success:function(res){
-       console.log("my",res)
-     }
-   })
+  console.log("list:onload")
   },
 
   /**
@@ -31,7 +30,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  console.log("myshow")
+  console.log('list:onshow')
   },
 
   /**

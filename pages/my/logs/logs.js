@@ -1,5 +1,5 @@
 //logs.js
-var util = require('../../utils/util.js')
+var util = require('../../../utils/util.js')
 Page({
   onShareAppMessage(){
 return {
@@ -40,7 +40,11 @@ return {
   },
   onLoad: function () {
     console.log('logs:onload')
-   
+    // this.setData({
+    //   logs: (wx.getStorageSync('logs') || []).map(function (log) {
+    //     return util.formatTime(new Date(log))
+    //   })
+    // })
   },
   onShow:function(){
     console.log('logs:onshow')

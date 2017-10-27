@@ -10,11 +10,11 @@ Page({
   bindViewTap: function() {
     console.log('go')
     wx.switchTab({
-      url: '../logs/logs'
+      url: '../list/list'
     })
   },
   onLoad: function () {
-    console.log(app.globalData)
+    console.log("index:onload")
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
@@ -33,5 +33,8 @@ Page({
         "desc":"送给好友一份保险"
 
       }
+  },
+  onShow:function(){
+    console.log('index:onshow')
   }
 })
