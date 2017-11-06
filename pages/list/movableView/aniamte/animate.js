@@ -1,29 +1,31 @@
-// pages/logs/movableView/movableview.js
+// pages/list/movableView/aniamte/animate.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    x: 0,
-    y: 0
+    animationData:{}
   },
-  toanimate(){
-wx.navigateTo({
-  url: `/pages/list/movableView/aniamte/animate`,
-})
-  },
-  tap: function (e) {
-    this.setData({
-      x: 30,
-      y: 30
-    });
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  console.log('movable:onload')
+  let animation=new wx.createAnimation({
+    duration:1000,
+    timingFunction: "linear",
+    delay: 0,
+    transformOrigin: "50% 50% 0",
+   
+  })
+  this.animation = animation
+  animation.scale(1.5,1.5).step()
+  animation.rotate(90).backgroundColor('green').step()
+  // animation.opacity(1).step()
+  this.setData({
+    animationData: animation.export()
+  })
   },
 
   /**
@@ -37,7 +39,7 @@ wx.navigateTo({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('movable:onshow')
+  
   },
 
   /**

@@ -65,7 +65,7 @@ return {
 })
   },
   changehandle:function(index){
-  console.log('change')
+  console.log(this.data.logs[index].text.length)
    this.data.logs[index].show=true
    this.setData({
      logs:this.data.logs
@@ -74,7 +74,7 @@ return {
   valhandle:function(e){
     let index=e.target.dataset.num
     let value=e.detail.value
-    this.data.logs[index].text=value
+    this.data.logs[index].text=value.trim()
   },
   inphandle(e){
     console.log(e)
@@ -86,10 +86,10 @@ return {
       this.changehandle(index)
      
     } else if (e.target.dataset.ele == "inp"){
-      this.data.logs[index].focus=true
-      this.setData({
-        logs:this.data.logs
-      })
+      // this.data.logs[index].focus=true
+      // this.setData({
+      //   logs:this.data.logs
+      // })
      
     
     }

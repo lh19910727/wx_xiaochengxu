@@ -10,7 +10,7 @@
   </view>
   <view class="section__title">movable-view区域大于movable-area</view>
   <movable-area style="height: 100px;width: 100px;background: red;" direction="all">
-    <movable-view style="height: 200px; width: 200px; background: blue;">
+    <movable-view bindtap='toanimate' style="height: 200px; width: 200px; background: blue;">
     </movable-view>
   </movable-area>
 </view>

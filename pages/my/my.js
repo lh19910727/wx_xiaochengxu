@@ -8,6 +8,8 @@ Page({
   data: {
     motto: 'Hello World!!',
    list:[
+     '/pages/image/myphoto1.jpg',
+     '/pages/image/myphoto2.jpg',
      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509083854109&di=90c55355e5ac4395d9cb9d1cf5f1c659&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F960a304e251f95ca12444c75c3177f3e66095244.jpg',
      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509083782212&di=d22661be71b3072a9810f5ff522faaa8&imgtype=0&src=http%3A%2F%2Fmvimg1.meitudata.com%2F551f2718c5cbf4963.jpg',
      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509083782211&di=6d0404004b1be941aebcc7b7c98e4331&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201412%2F10%2F20141210234151_GGQH3.thumb.700_0.jpeg',

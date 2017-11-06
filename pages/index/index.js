@@ -35,6 +35,16 @@ Page({
       }
   },
   onShow:function(){
+    wx.showShareMenu({
+      "withShareTicket":true
+    })
+    // debugger
+    wx.getShareInfo({
+      shareTicket: '123',
+      success:function(res){
+        alert(res)
+      }
+    })
     console.log('index:onshow')
   }
 })

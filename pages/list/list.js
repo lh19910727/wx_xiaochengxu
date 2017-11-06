@@ -5,7 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    scrollView:"red",
+  listcolor:[
+    'red',
+    'yellow',
+    'green',
+    'lightgreen'
+  ]
+  },
+  go(){
+
+  },
+  scrollhandle(e){
+    console.log(e)
+    this.setData({
+      scrollView: e.target.id
+    })
   },
   clickhandle(){
 wx.navigateTo({
